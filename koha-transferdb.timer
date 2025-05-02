@@ -1,0 +1,12 @@
+# /etc/systemd/system/koha-transferdb.timer
+[Unit]
+Description=Timer to check and sync Koha DB Transfer flag every minute
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1min
+AccuracySec=30s
+Persistent=true
+
+[Install]
+WantedBy=timers.target
