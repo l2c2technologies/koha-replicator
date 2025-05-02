@@ -1,0 +1,7 @@
+# /etc/default/koha-transferdb
+
+KOHA_INSTANCE="koha_library"
+REMOTE_SERVER="backup.example.com"
+REMOTE_USER="backup_uploader"
+REMOTE_PATH="/var/backups/koha"
+KEY_PATH="/home/koha/.ssh/backup_key"
