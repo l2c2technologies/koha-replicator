@@ -1,0 +1,16 @@
+# /etc/systemd/system/koha-transferdb.service
+[Unit]
+Description=Koha TransferDB Trigger and Backup Sync
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=koha
+Group=koha
+ExecStart=/usr/local/bin/upload_backup.sh
+
+ProtectSystem=full
+ProtectHome=yes
+PrivateTmp=yes
+NoNewPrivileges=true
